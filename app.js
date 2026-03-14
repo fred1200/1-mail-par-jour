@@ -1,3 +1,15 @@
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Cette page permet de garder l'application "réveillée"
+app.get('/', (req, res) => {
+  res.send('L\'application de Maria est active et opérationnelle ! 🚀');
+});
+
+app.listen(port, () => {
+  console.log(`Serveur de réveil lancé sur le port ${port}`);
+});
 const nodemailer = require('nodemailer');
 const cron = require('node-cron');
 
