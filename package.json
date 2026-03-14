@@ -1,0 +1,12 @@
+{
+  "name": "app-maria",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "nodemailer": "^6.9.0",
+    "node-cron": "^3.0.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
