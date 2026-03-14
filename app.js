@@ -5,8 +5,8 @@ const cron = require('node-cron');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'TON_EMAIL@gmail.com', 
-    pass: 'TON_MOT_DE_PASSE_D_APPLICATION' // Ce n'est pas ton mot de passe habituel
+    user: 'user: process.env.EMAIL_USER', 
+    pass: 'pass: process.env.EMAIL_PASS' // Ce n'est pas ton mot de passe habituel
   }
 });
 
@@ -26,7 +26,7 @@ function envoyerMail() {
   const messageDuJour = messages[(jourDuMois - 1) % messages.length];
 
   const mailOptions = {
-    from: 'TON_EMAIL@gmail.com',
+    from: 'user: process.env.EMAIL_USER',
     to: 'assesse.casting@gmail.com',
     subject: 'Une pensée pour toi, Maria',
     text: messageDuJour
